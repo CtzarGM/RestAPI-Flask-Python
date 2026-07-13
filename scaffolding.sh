@@ -1,147 +1,265 @@
 #!/bin/bash
 
-# Define the root course directory
 ROOT_DIR="inventory_engine_course"
 mkdir -p "$ROOT_DIR"
 cd "$ROOT_DIR" || exit
 
-echo "🚀 Scaffolding Project-Driven Master Class Architecture..."
+echo "🚀 Scaffolding unique named markdown files per lesson point..."
 
-# Section 1
-mkdir -p "sec01_intro_and_env/01_introduction_to_course" \
-         "sec01_intro_and_env/02_meet_classmates_and_instructor" \
-         "sec01_intro_and_env/03_environment_setup" \
-         "sec01_intro_and_env/04_how_to_get_started" \
-         "sec01_intro_and_env/05_installing_python_mac" \
-         "sec01_intro_and_env/06_installing_python_windows"
+# SEC01_INTRO_AND_ENV
+mkdir -p "sec01_intro_and_env/01_introduction_to_course"
+touch "sec01_intro_and_env/01_introduction_to_course/01_introduction_to_course.md"
+mkdir -p "sec01_intro_and_env/02_meet_classmates_and_instructor"
+touch "sec01_intro_and_env/02_meet_classmates_and_instructor/02_meet_classmates_and_instructor.md"
+mkdir -p "sec01_intro_and_env/03_environment_setup"
+touch "sec01_intro_and_env/03_environment_setup/03_environment_setup.md"
+mkdir -p "sec01_intro_and_env/04_how_to_get_started"
+touch "sec01_intro_and_env/04_how_to_get_started/04_how_to_get_started.md"
+mkdir -p "sec01_intro_and_env/05_installing_python_mac"
+touch "sec01_intro_and_env/05_installing_python_mac/05_installing_python_mac.md"
+mkdir -p "sec01_intro_and_env/06_installing_python_windows"
+touch "sec01_intro_and_env/06_installing_python_windows/06_installing_python_windows.md"
 
-# Section 2
-mkdir -p "sec02_python_refresher/01_variables" \
-         "sec02_python_refresher/02_string_formatting" \
-         "sec02_python_refresher/03_getting_user_input" \
-         "sec02_python_refresher/04_writing_first_python_app" \
-         "sec02_python_refresher/05_lists_tuples_sets" \
-         "sec02_python_refresher/06_lists_tuples_sets_deep_dive" \
-         "sec02_python_refresher/07_booleans" \
-         "sec02_python_refresher/08_advanced_sets_operations" \
-         "sec02_python_refresher/09_if_statements" \
-         "sec02_python_refresher/10_in_keyword" \
-         "sec02_python_refresher/11_if_statements_with_in" \
-         "sec02_python_refresher/12_loops_for" \
-         "sec02_python_refresher/13_loops_while" \
-         "sec02_python_refresher/14_flow_control_loops_ifs" \
-         "sec02_python_refresher/15_list_comprehensions" \
-         "sec02_python_refresher/16_dictionaries" \
-         "sec02_python_refresher/17_dictionary_comprehensions" \
-         "sec02_python_refresher/18_destructuring" \
-         "sec02_python_refresher/19_dictionaries_called_students" \
-         "sec02_python_refresher/20_functions" \
-         "sec02_python_refresher/21_function_arguments" \
-         "sec02_python_refresher/22_default_and_keyword_arguments" \
-         "sec02_python_refresher/23_functions_returning_values" \
-         "sec02_python_refresher/24_functions_deep_dive" \
-         "sec02_python_refresher/25_lambda_functions" \
-         "sec02_python_refresher/26_unpacking_args_kwargs" \
-         "sec02_python_refresher/27_oop_in_python" \
-         "sec02_python_refresher/28_magic_methods_str_repr" \
-         "sec02_python_refresher/29_classes_and_objects" \
-         "sec02_python_refresher/30_classmethod_and_staticmethod" \
-         "sec02_python_refresher/31_classmethod_and_staticmethod_deep_dive" \
-         "sec02_python_refresher/32_class_inheritance" \
-         "sec02_python_refresher/33_class_composition" \
-         "sec02_python_refresher/34_type_hinting" \
-         "sec02_python_refresher/35_modules_and_imports" \
-         "sec02_python_refresher/36_absolute_and_relative_imports" \
-         "sec02_python_refresher/37_exceptions" \
-         "sec02_python_refresher/38_custom_exception_classes" \
-         "sec02_python_refresher/39_first_class_functions" \
-         "sec02_python_refresher/40_simple_decorator" \
-         "sec02_python_refresher/41_at_syntax_for_decorator" \
-         "sec02_python_refresher/42_mutability_in_python" \
-         "sec02_python_refresher/43_mutable_default_parameters" \
-         "sec02_python_refresher/44_python_basics_quiz" \
-         "sec02_python_refresher/45_keep_in_mind" \
-         "sec02_python_refresher/46_map_function_explained" \
-         "sec02_python_refresher/47_filter_function_explained"
+# SEC02_PYTHON_REFRESHER
+mkdir -p "sec02_python_refresher/01_variables"
+touch "sec02_python_refresher/01_variables/01_variables.md"
+mkdir -p "sec02_python_refresher/02_string_formatting"
+touch "sec02_python_refresher/02_string_formatting/02_string_formatting.md"
+mkdir -p "sec02_python_refresher/03_getting_user_input"
+touch "sec02_python_refresher/03_getting_user_input/03_getting_user_input.md"
+mkdir -p "sec02_python_refresher/04_writing_first_python_app"
+touch "sec02_python_refresher/04_writing_first_python_app/04_writing_first_python_app.md"
+mkdir -p "sec02_python_refresher/05_lists_tuples_sets"
+touch "sec02_python_refresher/05_lists_tuples_sets/05_lists_tuples_sets.md"
+mkdir -p "sec02_python_refresher/06_lists_tuples_sets_deep_dive"
+touch "sec02_python_refresher/06_lists_tuples_sets_deep_dive/06_lists_tuples_sets_deep_dive.md"
+mkdir -p "sec02_python_refresher/07_booleans"
+touch "sec02_python_refresher/07_booleans/07_booleans.md"
+mkdir -p "sec02_python_refresher/08_advanced_sets_operations"
+touch "sec02_python_refresher/08_advanced_sets_operations/08_advanced_sets_operations.md"
+mkdir -p "sec02_python_refresher/09_if_statements"
+touch "sec02_python_refresher/09_if_statements/09_if_statements.md"
+mkdir -p "sec02_python_refresher/10_in_keyword"
+touch "sec02_python_refresher/10_in_keyword/10_in_keyword.md"
+mkdir -p "sec02_python_refresher/11_if_statements_with_in"
+touch "sec02_python_refresher/11_if_statements_with_in/11_if_statements_with_in.md"
+mkdir -p "sec02_python_refresher/12_loops_for"
+touch "sec02_python_refresher/12_loops_for/12_loops_for.md"
+mkdir -p "sec02_python_refresher/13_loops_while"
+touch "sec02_python_refresher/13_loops_while/13_loops_while.md"
+mkdir -p "sec02_python_refresher/14_flow_control_loops_ifs"
+touch "sec02_python_refresher/14_flow_control_loops_ifs/14_flow_control_loops_ifs.md"
+mkdir -p "sec02_python_refresher/15_list_comprehensions"
+touch "sec02_python_refresher/15_list_comprehensions/15_list_comprehensions.md"
+mkdir -p "sec02_python_refresher/16_dictionaries"
+touch "sec02_python_refresher/16_dictionaries/16_dictionaries.md"
+mkdir -p "sec02_python_refresher/17_dictionary_comprehensions"
+touch "sec02_python_refresher/17_dictionary_comprehensions/17_dictionary_comprehensions.md"
+mkdir -p "sec02_python_refresher/18_destructuring"
+touch "sec02_python_refresher/18_destructuring/18_destructuring.md"
+mkdir -p "sec02_python_refresher/19_dictionaries_called_students"
+touch "sec02_python_refresher/19_dictionaries_called_students/19_dictionaries_called_students.md"
+mkdir -p "sec02_python_refresher/20_functions"
+touch "sec02_python_refresher/20_functions/20_functions.md"
+mkdir -p "sec02_python_refresher/21_function_arguments"
+touch "sec02_python_refresher/21_function_arguments/21_function_arguments.md"
+mkdir -p "sec02_python_refresher/22_default_and_keyword_arguments"
+touch "sec02_python_refresher/22_default_and_keyword_arguments/22_default_and_keyword_arguments.md"
+mkdir -p "sec02_python_refresher/23_functions_returning_values"
+touch "sec02_python_refresher/23_functions_returning_values/23_functions_returning_values.md"
+mkdir -p "sec02_python_refresher/24_functions_deep_dive"
+touch "sec02_python_refresher/24_functions_deep_dive/24_functions_deep_dive.md"
+mkdir -p "sec02_python_refresher/25_lambda_functions"
+touch "sec02_python_refresher/25_lambda_functions/25_lambda_functions.md"
+mkdir -p "sec02_python_refresher/26_unpacking_args_kwargs"
+touch "sec02_python_refresher/26_unpacking_args_kwargs/26_unpacking_args_kwargs.md"
+mkdir -p "sec02_python_refresher/27_oop_in_python"
+touch "sec02_python_refresher/27_oop_in_python/27_oop_in_python.md"
+mkdir -p "sec02_python_refresher/28_magic_methods_str_repr"
+touch "sec02_python_refresher/28_magic_methods_str_repr/28_magic_methods_str_repr.md"
+mkdir -p "sec02_python_refresher/29_classes_and_objects"
+touch "sec02_python_refresher/29_classes_and_objects/29_classes_and_objects.md"
+mkdir -p "sec02_python_refresher/30_classmethod_and_staticmethod"
+touch "sec02_python_refresher/30_classmethod_and_staticmethod/30_classmethod_and_staticmethod.md"
+mkdir -p "sec02_python_refresher/31_classmethod_and_staticmethod_deep_dive"
+touch "sec02_python_refresher/31_classmethod_and_staticmethod_deep_dive/31_classmethod_and_staticmethod_deep_dive.md"
+mkdir -p "sec02_python_refresher/32_class_inheritance"
+touch "sec02_python_refresher/32_class_inheritance/32_class_inheritance.md"
+mkdir -p "sec02_python_refresher/33_class_composition"
+touch "sec02_python_refresher/33_class_composition/33_class_composition.md"
+mkdir -p "sec02_python_refresher/34_type_hinting"
+touch "sec02_python_refresher/34_type_hinting/34_type_hinting.md"
+mkdir -p "sec02_python_refresher/35_modules_and_imports"
+touch "sec02_python_refresher/35_modules_and_imports/35_modules_and_imports.md"
+mkdir -p "sec02_python_refresher/36_absolute_and_relative_imports"
+touch "sec02_python_refresher/36_absolute_and_relative_imports/36_absolute_and_relative_imports.md"
+mkdir -p "sec02_python_refresher/37_exceptions"
+touch "sec02_python_refresher/37_exceptions/37_exceptions.md"
+mkdir -p "sec02_python_refresher/38_custom_exception_classes"
+touch "sec02_python_refresher/38_custom_exception_classes/38_custom_exception_classes.md"
+mkdir -p "sec02_python_refresher/39_first_class_functions"
+touch "sec02_python_refresher/39_first_class_functions/39_first_class_functions.md"
+mkdir -p "sec02_python_refresher/40_simple_decorator"
+touch "sec02_python_refresher/40_simple_decorator/40_simple_decorator.md"
+mkdir -p "sec02_python_refresher/41_at_syntax_for_decorator"
+touch "sec02_python_refresher/41_at_syntax_for_decorator/41_at_syntax_for_decorator.md"
+mkdir -p "sec02_python_refresher/42_mutability_in_python"
+touch "sec02_python_refresher/42_mutability_in_python/42_mutability_in_python.md"
+mkdir -p "sec02_python_refresher/43_mutable_default_parameters"
+touch "sec02_python_refresher/43_mutable_default_parameters/43_mutable_default_parameters.md"
+mkdir -p "sec02_python_refresher/44_python_basics_quiz"
+touch "sec02_python_refresher/44_python_basics_quiz/44_python_basics_quiz.md"
+mkdir -p "sec02_python_refresher/45_keep_in_mind"
+touch "sec02_python_refresher/45_keep_in_mind/45_keep_in_mind.md"
+mkdir -p "sec02_python_refresher/46_map_function_explained"
+touch "sec02_python_refresher/46_map_function_explained/46_map_function_explained.md"
+mkdir -p "sec02_python_refresher/47_filter_function_explained"
+touch "sec02_python_refresher/47_filter_function_explained/47_filter_function_explained.md"
 
-# Section 3
-mkdir -p "sec03_flask_basics/01_project_summary" \
-         "sec03_flask_basics/02_initial_configuration" \
-         "sec03_flask_basics/03_first_endpoint" \
-         "sec03_flask_basics/04_what_is_json" \
-         "sec03_flask_basics/05_testing_and_interacting" \
-         "sec03_flask_basics/06_creating_shops" \
-         "sec03_flask_basics/07_adding_products_to_shops" \
-         "sec03_flask_basics/08_retrieving_specific_shop_and_products" \
-         "sec03_flask_basics/09_flask_and_rest_api_basics_review"
+# SEC03_FLASK_BASICS
+mkdir -p "sec03_flask_basics/01_project_summary"
+touch "sec03_flask_basics/01_project_summary/01_project_summary.md"
+mkdir -p "sec03_flask_basics/02_initial_configuration"
+touch "sec03_flask_basics/02_initial_configuration/02_initial_configuration.md"
+mkdir -p "sec03_flask_basics/03_first_endpoint"
+touch "sec03_flask_basics/03_first_endpoint/03_first_endpoint.md"
+mkdir -p "sec03_flask_basics/04_what_is_json"
+touch "sec03_flask_basics/04_what_is_json/04_what_is_json.md"
+mkdir -p "sec03_flask_basics/05_testing_and_interacting"
+touch "sec03_flask_basics/05_testing_and_interacting/05_testing_and_interacting.md"
+mkdir -p "sec03_flask_basics/06_creating_shops"
+touch "sec03_flask_basics/06_creating_shops/06_creating_shops.md"
+mkdir -p "sec03_flask_basics/07_adding_products_to_shops"
+touch "sec03_flask_basics/07_adding_products_to_shops/07_adding_products_to_shops.md"
+mkdir -p "sec03_flask_basics/08_retrieving_specific_shop_and_products"
+touch "sec03_flask_basics/08_retrieving_specific_shop_and_products/08_retrieving_specific_shop_and_products.md"
+mkdir -p "sec03_flask_basics/09_flask_and_rest_api_basics_review"
+touch "sec03_flask_basics/09_flask_and_rest_api_basics_review/09_flask_and_rest_api_basics_review.md"
 
-# Section 4
-mkdir -p "sec04_docker/01_containers_and_images" \
-         "sec04_docker/02_download_resources" \
-         "sec04_docker/03_running_flask_in_container" \
-         "sec04_docker/04_virtualization_quiz"
+# SEC04_DOCKER
+mkdir -p "sec04_docker/01_containers_and_images"
+touch "sec04_docker/01_containers_and_images/01_containers_and_images.md"
+mkdir -p "sec04_docker/02_download_resources"
+touch "sec04_docker/02_download_resources/02_download_resources.md"
+mkdir -p "sec04_docker/03_running_flask_in_container"
+touch "sec04_docker/03_running_flask_in_container/03_running_flask_in_container.md"
+mkdir -p "sec04_docker/04_virtualization_quiz"
+touch "sec04_docker/04_virtualization_quiz/04_virtualization_quiz.md"
 
-# Section 5
-mkdir -p "sec05_smorest_and_marshmallow/01_adding_dependencies_and_db" \
-         "sec05_smorest_and_marshmallow/02_adding_new_endpoints" \
-         "sec05_smorest_and_marshmallow/03_testing_endpoints_and_bugfixes" \
-         "sec05_smorest_and_marshmallow/04_running_in_docker_with_autoreload" \
-         "sec05_smorest_and_marshmallow/05_blueprints_and_methodviews_shops" \
-         "sec05_smorest_and_marshmallow/06_blueprints_and_methodviews_products" \
-         "sec05_smorest_and_marshmallow/07_marshmallow_schemas" \
-         "sec05_smorest_and_marshmallow/08_data_validation" \
-         "sec05_smorest_and_marshmallow/09_smorest_decorators" \
-         "sec05_smorest_and_marshmallow/10_download_postman_collection" \
-         "sec05_smorest_and_marshmallow/11_testing_after_marshmallow" \
-         "sec05_smorest_and_marshmallow/12_smorest_and_marshmallow_review"
+# SEC05_SMOREST_AND_MARSHMALLOW
+mkdir -p "sec05_smorest_and_marshmallow/01_adding_dependencies_and_db"
+touch "sec05_smorest_and_marshmallow/01_adding_dependencies_and_db/01_adding_dependencies_and_db.md"
+mkdir -p "sec05_smorest_and_marshmallow/02_adding_new_endpoints"
+touch "sec05_smorest_and_marshmallow/02_adding_new_endpoints/02_adding_new_endpoints.md"
+mkdir -p "sec05_smorest_and_marshmallow/03_testing_endpoints_and_bugfixes"
+touch "sec05_smorest_and_marshmallow/03_testing_endpoints_and_bugfixes/03_testing_endpoints_and_bugfixes.md"
+mkdir -p "sec05_smorest_and_marshmallow/04_running_in_docker_with_autoreload"
+touch "sec05_smorest_and_marshmallow/04_running_in_docker_with_autoreload/04_running_in_docker_with_autoreload.md"
+mkdir -p "sec05_smorest_and_marshmallow/05_blueprints_and_methodviews_shops"
+touch "sec05_smorest_and_marshmallow/05_blueprints_and_methodviews_shops/05_blueprints_and_methodviews_shops.md"
+mkdir -p "sec05_smorest_and_marshmallow/06_blueprints_and_methodviews_products"
+touch "sec05_smorest_and_marshmallow/06_blueprints_and_methodviews_products/06_blueprints_and_methodviews_products.md"
+mkdir -p "sec05_smorest_and_marshmallow/07_marshmallow_schemas"
+touch "sec05_smorest_and_marshmallow/07_marshmallow_schemas/07_marshmallow_schemas.md"
+mkdir -p "sec05_smorest_and_marshmallow/08_data_validation"
+touch "sec05_smorest_and_marshmallow/08_data_validation/08_data_validation.md"
+mkdir -p "sec05_smorest_and_marshmallow/09_smorest_decorators"
+touch "sec05_smorest_and_marshmallow/09_smorest_decorators/09_smorest_decorators.md"
+mkdir -p "sec05_smorest_and_marshmallow/10_download_postman_collection"
+touch "sec05_smorest_and_marshmallow/10_download_postman_collection/10_download_postman_collection.md"
+mkdir -p "sec05_smorest_and_marshmallow/11_testing_after_marshmallow"
+touch "sec05_smorest_and_marshmallow/11_testing_after_marshmallow/11_testing_after_marshmallow.md"
+mkdir -p "sec05_smorest_and_marshmallow/12_smorest_and_marshmallow_review"
+touch "sec05_smorest_and_marshmallow/12_smorest_and_marshmallow_review/12_smorest_and_marshmallow_review.md"
 
-# Section 6
-mkdir -p "sec06_sqlalchemy/01_pre_lecture_note" \
-         "sec06_sqlalchemy/02_introduction_to_sqlalchemy" \
-         "sec06_sqlalchemy/03_product_model_and_shop_model" \
-         "sec06_sqlalchemy/04_one_to_many_relationships" \
-         "sec06_sqlalchemy/05_flask_sqlalchemy_configuration" \
-         "sec06_sqlalchemy/06_inserting_data_into_table" \
-         "sec06_sqlalchemy/07_finding_models_by_id_or_404" \
-         "sec06_sqlalchemy/08_updating_models" \
-         "sec06_sqlalchemy/09_retrieving_all_models" \
-         "sec06_sqlalchemy/10_deleting_models_with_cascading" \
-         "sec06_sqlalchemy/11_testing_database_changes" \
-         "sec06_sqlalchemy/12_sqlalchemy_basics_review"
+# SEC06_SQLALCHEMY
+mkdir -p "sec06_sqlalchemy/01_pre_lecture_note"
+touch "sec06_sqlalchemy/01_pre_lecture_note/01_pre_lecture_note.md"
+mkdir -p "sec06_sqlalchemy/02_introduction_to_sqlalchemy"
+touch "sec06_sqlalchemy/02_introduction_to_sqlalchemy/02_introduction_to_sqlalchemy.md"
+mkdir -p "sec06_sqlalchemy/03_product_model_and_shop_model"
+touch "sec06_sqlalchemy/03_product_model_and_shop_model/03_product_model_and_shop_model.md"
+mkdir -p "sec06_sqlalchemy/04_one_to_many_relationships"
+touch "sec06_sqlalchemy/04_one_to_many_relationships/04_one_to_many_relationships.md"
+mkdir -p "sec06_sqlalchemy/05_flask_sqlalchemy_configuration"
+touch "sec06_sqlalchemy/05_flask_sqlalchemy_configuration/05_flask_sqlalchemy_configuration.md"
+mkdir -p "sec06_sqlalchemy/06_inserting_data_into_table"
+touch "sec06_sqlalchemy/06_inserting_data_into_table/06_inserting_data_into_table.md"
+mkdir -p "sec06_sqlalchemy/07_finding_models_by_id_or_404"
+touch "sec06_sqlalchemy/07_finding_models_by_id_or_404/07_finding_models_by_id_or_404.md"
+mkdir -p "sec06_sqlalchemy/08_updating_models"
+touch "sec06_sqlalchemy/08_updating_models/08_updating_models.md"
+mkdir -p "sec06_sqlalchemy/09_retrieving_all_models"
+touch "sec06_sqlalchemy/09_retrieving_all_models/09_retrieving_all_models.md"
+mkdir -p "sec06_sqlalchemy/10_deleting_models_with_cascading"
+touch "sec06_sqlalchemy/10_deleting_models_with_cascading/10_deleting_models_with_cascading.md"
+mkdir -p "sec06_sqlalchemy/11_testing_database_changes"
+touch "sec06_sqlalchemy/11_testing_database_changes/11_testing_database_changes.md"
+mkdir -p "sec06_sqlalchemy/12_sqlalchemy_basics_review"
+touch "sec06_sqlalchemy/12_sqlalchemy_basics_review/12_sqlalchemy_basics_review.md"
 
-# Section 7
-mkdir -p "sec07_git/01_intro_to_git_and_commands" \
-         "sec07_git/02_branches_and_branch_commands" \
-         "sec07_git/03_remote_repositories_and_commands" \
-         "sec07_git/04_advanced_git_commands" \
-         "sec07_git/05_rebase_vs_merge_vs_squash" \
-         "sec07_git/06_resolving_merge_conflicts" \
-         "sec07_git/07_gitignore_necessity" \
-         "sec07_git/08_git_submodules_and_tips" \
-         "sec07_git/09_initializing_git_in_rest_api" \
-         "sec07_git/10_test_git_knowledge"
+# SEC07_GIT
+mkdir -p "sec07_git/01_intro_to_git_and_commands"
+touch "sec07_git/01_intro_to_git_and_commands/01_intro_to_git_and_commands.md"
+mkdir -p "sec07_git/02_branches_and_branch_commands"
+touch "sec07_git/02_branches_and_branch_commands/02_branches_and_branch_commands.md"
+mkdir -p "sec07_git/03_remote_repositories_and_commands"
+touch "sec07_git/03_remote_repositories_and_commands/03_remote_repositories_and_commands.md"
+mkdir -p "sec07_git/04_advanced_git_commands"
+touch "sec07_git/04_advanced_git_commands/04_advanced_git_commands.md"
+mkdir -p "sec07_git/05_rebase_vs_merge_vs_squash"
+touch "sec07_git/05_rebase_vs_merge_vs_squash/05_rebase_vs_merge_vs_squash.md"
+mkdir -p "sec07_git/06_resolving_merge_conflicts"
+touch "sec07_git/06_resolving_merge_conflicts/06_resolving_merge_conflicts.md"
+mkdir -p "sec07_git/07_gitignore_necessity"
+touch "sec07_git/07_gitignore_necessity/07_gitignore_necessity.md"
+mkdir -p "sec07_git/08_git_submodules_and_tips"
+touch "sec07_git/08_git_submodules_and_tips/08_git_submodules_and_tips.md"
+mkdir -p "sec07_git/09_initializing_git_in_rest_api"
+touch "sec07_git/09_initializing_git_in_rest_api/09_initializing_git_in_rest_api.md"
+mkdir -p "sec07_git/10_test_git_knowledge"
+touch "sec07_git/10_test_git_knowledge/10_test_git_knowledge.md"
 
-# Section 8
-mkdir -p "sec08_jwt/01_what_is_jwt" \
-         "sec08_jwt/02_configuring_flask_jwt_extended" \
-         "sec08_jwt/03_user_model_and_schema" \
-         "sec08_jwt/04_registration_endpoint" \
-         "sec08_jwt/05_login_endpoint" \
-         "sec08_jwt/06_securing_endpoints_via_jwt" \
-         "sec08_jwt/07_logout_feature" \
-         "sec08_jwt/08_token_refreshing_overview" \
-         "sec08_jwt/09_refreshing_tokens_implementation" \
-         "sec08_jwt/10_testing_jwt_changes" \
-         "sec08_jwt/11_jwt_basics_review"
+# SEC08_JWT
+mkdir -p "sec08_jwt/01_what_is_jwt"
+touch "sec08_jwt/01_what_is_jwt/01_what_is_jwt.md"
+mkdir -p "sec08_jwt/02_configuring_flask_jwt_extended"
+touch "sec08_jwt/02_configuring_flask_jwt_extended/02_configuring_flask_jwt_extended.md"
+mkdir -p "sec08_jwt/03_user_model_and_schema"
+touch "sec08_jwt/03_user_model_and_schema/03_user_model_and_schema.md"
+mkdir -p "sec08_jwt/04_registration_endpoint"
+touch "sec08_jwt/04_registration_endpoint/04_registration_endpoint.md"
+mkdir -p "sec08_jwt/05_login_endpoint"
+touch "sec08_jwt/05_login_endpoint/05_login_endpoint.md"
+mkdir -p "sec08_jwt/06_securing_endpoints_via_jwt"
+touch "sec08_jwt/06_securing_endpoints_via_jwt/06_securing_endpoints_via_jwt.md"
+mkdir -p "sec08_jwt/07_logout_feature"
+touch "sec08_jwt/07_logout_feature/07_logout_feature.md"
+mkdir -p "sec08_jwt/08_token_refreshing_overview"
+touch "sec08_jwt/08_token_refreshing_overview/08_token_refreshing_overview.md"
+mkdir -p "sec08_jwt/09_refreshing_tokens_implementation"
+touch "sec08_jwt/09_refreshing_tokens_implementation/09_refreshing_tokens_implementation.md"
+mkdir -p "sec08_jwt/10_testing_jwt_changes"
+touch "sec08_jwt/10_testing_jwt_changes/10_testing_jwt_changes.md"
+mkdir -p "sec08_jwt/11_jwt_basics_review"
+touch "sec08_jwt/11_jwt_basics_review/11_jwt_basics_review.md"
 
-# Section 9
-mkdir -p "sec09_deployment/01_downloading_frontend_code" \
-         "sec09_deployment/02_extracting_and_running_frontend" \
-         "sec09_deployment/03_render_web_service_hosting" \
-         "sec09_deployment/04_running_flask_gunicorn_docker" \
-         "sec09_deployment/05_render_static_sites_frontend" \
-         "sec09_deployment/06_test_finished_production_app" \
-         "sec09_deployment/07_test_your_skills" \
-         "sec09_deployment/08_conclusion_next_steps"
+# SEC09_DEPLOYMENT
+mkdir -p "sec09_deployment/01_downloading_frontend_code"
+touch "sec09_deployment/01_downloading_frontend_code/01_downloading_frontend_code.md"
+mkdir -p "sec09_deployment/02_extracting_and_running_frontend"
+touch "sec09_deployment/02_extracting_and_running_frontend/02_extracting_and_running_frontend.md"
+mkdir -p "sec09_deployment/03_render_web_service_hosting"
+touch "sec09_deployment/03_render_web_service_hosting/03_render_web_service_hosting.md"
+mkdir -p "sec09_deployment/04_running_flask_gunicorn_docker"
+touch "sec09_deployment/04_running_flask_gunicorn_docker/04_running_flask_gunicorn_docker.md"
+mkdir -p "sec09_deployment/05_render_static_sites_frontend"
+touch "sec09_deployment/05_render_static_sites_frontend/05_render_static_sites_frontend.md"
+mkdir -p "sec09_deployment/06_test_finished_production_app"
+touch "sec09_deployment/06_test_finished_production_app/06_test_finished_production_app.md"
+mkdir -p "sec09_deployment/07_test_your_skills"
+touch "sec09_deployment/07_test_your_skills/07_test_your_skills.md"
+mkdir -p "sec09_deployment/08_conclusion_next_steps"
+touch "sec09_deployment/08_conclusion_next_steps/08_conclusion_next_steps.md"
 
-echo "✅ Folders successfully generated! Your complete workspace maps perfectly to the Master Class."
+echo "✅ Complete custom workspace generated successfully!"
