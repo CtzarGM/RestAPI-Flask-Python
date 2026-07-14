@@ -17,7 +17,7 @@ We can inspect the exact memory address of any object using Python's built-in id
 - Immutable Types (Strings, Integers, Floats, Tuples): Once created in memory, their value cannot be changed. If you "modify" them, \* Python actually creates a new object at a new memory address and points the variable to it.
 - Mutable Types (Lists, Dictionaries, Sets): The container itself can be modified in place. Multiple variables pointing to the same mutable object will all reflect any changes made to it.
 
-[This snippet exemplifies this](../src/sec02_python_refresher/01_variables.py)
+[Variables example](../src/sec02_python_refresher/01_variables.py)
 
 ### Key Takeaway
 
@@ -54,3 +54,25 @@ Let's write a script that simulates a database record pull and formats a structu
 ### Key Takeaway
 
 When emitting structured logs to standard output (stdout) or writing automated test assertions, F-strings let us easily align data columns and clean up floating-point values (like rounding money to two decimals: `:.2f`) without altering the actual data types stored in our PostgreSQL tables.
+
+## 04. Getting User Input in Python
+
+While our production Flask REST API will ultimately receive data through HTTP requests (using JSON payloads), during early development and system scripting, we often rely on command-line prompts to interact with scripts.
+
+In Python, we capture user input using the built-in `input()` function.
+
+### How `input()` Operates Under the Hood
+
+1. Blocking Operation: When Python hits `input()`, it pauses execution and waits for the user to type something in the terminal and press `Enter`.
+
+1. String Default: The `input()` function always returns a string, regardless of what the user types. If you expect a number (like a product's price or count), you must explicitly convert (cast) it to the target data type (e.g., `int()` or `float()`).
+
+### Practical Example: CLI Product Intake Tool
+
+Let's write a simple command-line intake wizard. This tool prompts an administrator for a product's details, casts the data to the appropriate types, handles potential input errors gracefully, and prints a formatted confirmation.
+
+[User input example](../src/sec02_python_refresher/03_getting_user_input.py)
+
+### Key Takeaway
+
+User inputs cannot be trusted. Just like we cast `input()` strings and catch potential `ValueError` exceptions here, our API will need strict validation rules (which we'll handle elegantly later using Marshmallow schemas) to ensure a user doesn't pass letters to an integer stock field
