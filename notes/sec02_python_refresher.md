@@ -76,3 +76,29 @@ Let's write a simple command-line intake wizard. This tool prompts an administra
 ### Key Takeaway
 
 User inputs cannot be trusted. Just like we cast `input()` strings and catch potential `ValueError` exceptions here, our API will need strict validation rules (which we'll handle elegantly later using Marshmallow schemas) to ensure a user doesn't pass letters to an integer stock field
+
+## 05. Writing Our First Python App
+
+Up to this point, we have explored variables, formatted text, and accepted input. Now, we are combining these foundational elements to build our first mini-application: an Interactive Store Valuation Calculator.
+
+This app simulates a lightweight command-line portal where a retail manager can calculate key financial metrics for a specific shop's inventory on the fly.
+
+### Architectural Concept: Input, Process, Output (IPO)
+
+Every solid backend service or script follows the IPO design pattern:
+
+1. Input: Securely capture raw data (simulating our future HTTP payloads).
+
+1. Process: Transform, clean, and compute the data (business logic).
+
+1. Output: Formulate a structured, readable response (simulating our future JSON responses).
+
+### Practical Example: Store Valuation Calculator
+
+We will write an interactive utility that takes store details and product metrics to calculate total value, average item price, and return a clean, executive-level terminal summary.
+
+[First app example](../src/sec02_python_refresher/03_getting_user_input.py)
+
+### Key Takeaway for our Inventory Engine
+
+Even simple apps require strict control flow, type transformations, and zero-division protection to remain stable. When we transition this logic into REST API controllers, the core calculation logic remains identical—only the delivery system changes from terminal strings to HTTP JSON bodies.
