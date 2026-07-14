@@ -263,3 +263,23 @@ Let's write a script that acts as an API validation gatekeeper. It will inspect 
 ### Key Takeaway for our Inventory Engine
 
 Checking `key in dictionary` is extremely fast ($O(1)$) and safe. It prevents your application from raising a `KeyError` and crashing when accessing fields that a user or third-party client forgot to include in their API request.
+
+## 11. Loops in Python: The `for` Loop
+
+In Python, a `for` loop is an "iterator-based" loop. Instead of manually incrementing an index variable (like $i$ in a traditional $C$-style loop), Python cleanly binds each item in a collection to a temporary variable, one by one, until the collection is exhausted.
+
+### Common Iteration Patterns
+
+- Iterating Over Lists/Tuples: Accesses each element sequentially.
+- Iterating Over Dictionaries: By default, iterating over a dictionary loops through its keys. To loop through keys and values together, we use the `.items()` method.
+- The `range()` Function: Generates a sequence of numbers on the fly, useful when you want to run a block of code a specific number of times.
+
+### Practical Example: Batch Inventory Value Reporting
+
+Let's write a script that processes a list of raw stock dictionaries. We will use a `for` loop to calculate the valuation of each item, maintain a running total of our store's total value, and print out a clean, formatted report.
+
+[For Loop example](../src/sec02_python_refresher/11_loops_for.py)
+
+### Key Takeaway for our Inventory Engine
+
+The `for ... in ...` loop is your workhorse for backend data transformations. When querying a database using SQLAlchemy, it will return collections of model instances. We will use for loops just like this one to serialize those models into JSON-compatible lists for our API responses.
