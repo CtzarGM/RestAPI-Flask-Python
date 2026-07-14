@@ -189,3 +189,30 @@ When a user filters products, or when we want to recommend related items, we can
 Let's write a script that compares an incoming product's tags against our store's allowed master tags to see if they match, have invalid entries, or share common categories.
 
 [Advanced set operations example](../src/sec02_python_refresher/07_advanced_sets_operations.py)
+
+## 08. `if` Statements (Conditional Branching)
+
+In code, conditional branching is how our application makes decisions. When our REST API receives a request, we will use `if` statements to evaluate conditions like: "Is this product out of stock?", "Does the user have admin privileges?", or "Is the database connection alive?".
+
+### Anatomy of an `if` Statement in Python
+
+Python uses indentation (4 spaces) instead of curly braces {} to define blocks of code.
+
+```Python
+if condition:
+    # Executed if condition is True
+elif another_condition:
+    # Executed if the first condition is False AND this one is True
+else:
+    # Executed if all above conditions are False
+```
+
+### Practical Example: Automated Order Processing Decision Tree
+
+Let's write a script that evaluates an incoming order against stock levels, warehouse status, and a customer's VIP standing to decide if an order can be fulfilled, backordered, or rejected.
+
+[If statements example](../src/sec02_python_refresher/08_if_statements.py)
+
+### Key Takeaway for our Inventory Engine
+
+Indentation is syntax in Python. Misaligning your spaces by even one character will throw an IndentationError. When we write routes in Flask, the entire execution logic of the endpoint will be nested inside an indented block under the route definition.
