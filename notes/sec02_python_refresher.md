@@ -123,3 +123,7 @@ When building a system to track stock, we rarely deal with just one product at a
 Let's write a script that illustrates the practical behavior of all three collections under the hood.
 
 [Python Collections example](../src/sec02_python_refresher/03_getting_user_input.py)
+
+### Key Takeaway for our Inventory Engine
+
+Selecting the right collection prevents performance issues and design bugs. We use lists to order and manipulate query results, tuples to safely pass read-only config properties, and sets when we need to instantly check if a product has a specific permission tag without searching through an entire array item-by-item.
