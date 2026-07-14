@@ -190,6 +190,10 @@ Let's write a script that compares an incoming product's tags against our store'
 
 [Advanced set operations example](../src/sec02_python_refresher/07_advanced_sets_operations.py)
 
+### Key Takeaway for our Inventory Engine
+
+Using set operations like `.difference()` allows us to perform validation checks in $O(1)$ average time complexity. This is significantly faster and cleaner than writing nested `for` loops to compare arrays, keeping our backend insertion pipeline lightweight.
+
 ## 08. `if` Statements (Conditional Branching)
 
 In code, conditional branching is how our application makes decisions. When our REST API receives a request, we will use `if` statements to evaluate conditions like: "Is this product out of stock?", "Does the user have admin privileges?", or "Is the database connection alive?".
@@ -216,3 +220,26 @@ Let's write a script that evaluates an incoming order against stock levels, ware
 ### Key Takeaway for our Inventory Engine
 
 Indentation is syntax in Python. Misaligning your spaces by even one character will throw an IndentationError. When we write routes in Flask, the entire execution logic of the endpoint will be nested inside an indented block under the route definition.
+
+## 09. The `in` Keyword in Python
+
+In backend development, we constantly need to check for membership. We might need to ask: "Is this product category supported by our store?", "Is this SKU in our recalled items list?", or "Does this user's list of roles contain 'admin'?"
+
+In Python, the `in` keyword makes these membership checks incredibly readable and highly efficient.
+
+### How `in` Works Across Different Collections
+
+- Lists / Tuples: Python iterates through the elements one by one until it finds a match. (Time complexity: $O(N)$).
+- Sets: Python uses a hash table to check membership almost instantly, regardless of how large the set is. (Time complexity: $O(1)$).
+- Strings: Checks if a substring exists inside another string.
+- Dictionaries: Checks if a key exists in the dictionary's keys (not its values).
+
+### Practical Example: SKU Blacklist and Tag Validation
+
+Let's write a script that checks if an incoming product's tag or SKU belongs to a specific collection (like a list of recalled product SKUs or an active campaign tag set).
+
+[In keyword example](../src/sec02_python_refresher/09_in_keyword.py)
+
+### Key Takeaway for our Inventory Engine
+
+Checking membership in a `set` or a `dict` is practically instantaneous because of hashing. If you are validating millions of records against a blacklist, always store your blacklist as a set (e.g., `{}`) rather than a list (e.g., `[]`) to keep your API response times lightning fast.
