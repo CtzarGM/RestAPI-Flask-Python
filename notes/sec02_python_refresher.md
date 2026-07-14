@@ -1,6 +1,6 @@
 # Sec02 Python Refresher
 
-## 02. Variables in Python (Memory Model & Reference Tracking)
+## 01. Variables in Python (Memory Model & Reference Tracking)
 
 In Python, variables do not act like static "boxes" where values are permanently stored. Instead, they act as pointers or labels that refer to specific objects residing in system memory.
 
@@ -23,7 +23,7 @@ We can inspect the exact memory address of any object using Python's built-in id
 
 When passing database models, list parameters, or JSON payloads between service layers in our REST API, passing a mutable object (like a list of products) does not copy the data. It passes the pointer. If you mutate that list inside a validation helper, you mutate the original data everywhere else in that execution thread!
 
-## 03. String Formatting in Python
+## 02. String Formatting in Python
 
 As our Inventory Engine processes incoming payloads, queries databases, and routes traffic, our server will need to output clean, readable logs. String formatting is how we construct these messages dynamically.
 
@@ -55,7 +55,7 @@ Let's write a script that simulates a database record pull and formats a structu
 
 When emitting structured logs to standard output (stdout) or writing automated test assertions, F-strings let us easily align data columns and clean up floating-point values (like rounding money to two decimals: `:.2f`) without altering the actual data types stored in our PostgreSQL tables.
 
-## 04. Getting User Input in Python
+## 03. Getting User Input in Python
 
 While our production Flask REST API will ultimately receive data through HTTP requests (using JSON payloads), during early development and system scripting, we often rely on command-line prompts to interact with scripts.
 
@@ -77,7 +77,7 @@ Let's write a simple command-line intake wizard. This tool prompts an administra
 
 User inputs cannot be trusted. Just like we cast `input()` strings and catch potential `ValueError` exceptions here, our API will need strict validation rules (which we'll handle elegantly later using Marshmallow schemas) to ensure a user doesn't pass letters to an integer stock field
 
-## 05. Writing Our First Python App
+## 04. Writing Our First Python App
 
 Up to this point, we have explored variables, formatted text, and accepted input. Now, we are combining these foundational elements to build our first mini-application: an Interactive Store Valuation Calculator.
 
@@ -103,7 +103,7 @@ We will write an interactive utility that takes store details and product metric
 
 Even simple apps require strict control flow, type transformations, and zero-division protection to remain stable. When we transition this logic into REST API controllers, the core calculation logic remains identical—only the delivery system changes from terminal strings to HTTP JSON bodies.
 
-## 06. Lists, Tuples, and Sets in Python
+## 05. Lists, Tuples, and Sets in Python
 
 When building a system to track stock, we rarely deal with just one product at a time. We need collections to group our items together. Python offers three primary built-in collection types, each designed for a specific structural purpose.
 
@@ -128,7 +128,7 @@ Let's write a script that illustrates the practical behavior of all three collec
 
 Selecting the right collection prevents performance issues and design bugs. We use lists to order and manipulate query results, tuples to safely pass read-only config properties, and sets when we need to instantly check if a product has a specific permission tag without searching through an entire array item-by-item.
 
-## 07. Booleans in Python (Evaluating Logic & State)
+## 06. Booleans in Python (Evaluating Logic & State)
 
 Booleans in Python represent one of two logical states: `True` or `False`.
 
@@ -167,3 +167,25 @@ Let's write a script that validates if a shop has stock issues and evaluates if 
 ### Key Takeaway for our Inventory Engine
 
 In Python, `==` checks for value equality, which is what we want 99% of the time when comparing database IDs or string keys. We rarely use `is` unless checking against the singleton value `None` (e.g., `if product is None:`), which indicates a record was not found in the database.
+
+## 07. Advanced Set Operations (Tag & Category Math)
+
+In our inventory system, products will have tags (e.g., `{"electronics", "home-office", "wireless"}`).
+When a user filters products, or when we want to recommend related items, we can use Set Operations to compare these lists instantly without writing nested loops. This is incredibly fast, optimized, and elegant.
+
+###Core Set Operations
+
+- Difference (`.difference()` or `-`): Returns elements in the first set that are not in the second set.
+  - Use case: Finding which tags are missing from an incoming product payload compared to our master list of allowed categories.
+
+- Intersection (`.intersection()` or `&`): Returns elements that are common to both sets.
+  - Use case: Finding matching tags between a user's interests and a product's categories.
+
+- Union (`.union()` or `|`): Combines all unique elements from both sets.
+  - Use case: Merging category tags when combining two store catalogs.
+
+### Practical Example: Product Tag Auditing
+
+Let's write a script that compares an incoming product's tags against our store's allowed master tags to see if they match, have invalid entries, or share common categories.
+
+[Advanced set operations example](../src/sec02_python_refresher/07_advanced_sets_operations.py)
