@@ -243,3 +243,23 @@ Let's write a script that checks if an incoming product's tag or SKU belongs to 
 ### Key Takeaway for our Inventory Engine
 
 Checking membership in a `set` or a `dict` is practically instantaneous because of hashing. If you are validating millions of records against a blacklist, always store your blacklist as a set (e.g., `{}`) rather than a list (e.g., `[]`) to keep your API response times lightning fast.
+
+## 10. `if` Statements with the `in` Keyword
+
+In our REST API, we will frequently use `if` statements combined with the `in` keyword to handle dynamic request validation, such as:
+
+1. Payload Key Checks: Ensuring a client sent mandatory keys in a JSON object before we try to read them.
+
+1. Access Control Checks: Verifying if a client's role is in an allowed set of roles.
+
+1. Data Sanitization: Checking if a user's input contains restricted or blacklisted characters.
+
+### Practical Example: API Payload Validator
+
+Let's write a script that acts as an API validation gatekeeper. It will inspect an incoming dictionary (simulating a JSON request payload) to ensure it contains required fields, uses an approved currency, and doesn't contain blacklisted terms.
+
+[IF + IN example](../src/sec02_python_refresher/10_if_statements_with_in.py)
+
+### Key Takeaway for our Inventory Engine
+
+Checking `key in dictionary` is extremely fast ($O(1)$) and safe. It prevents your application from raising a `KeyError` and crashing when accessing fields that a user or third-party client forgot to include in their API request.
