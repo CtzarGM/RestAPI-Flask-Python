@@ -102,3 +102,24 @@ We will write an interactive utility that takes store details and product metric
 ### Key Takeaway for our Inventory Engine
 
 Even simple apps require strict control flow, type transformations, and zero-division protection to remain stable. When we transition this logic into REST API controllers, the core calculation logic remains identical—only the delivery system changes from terminal strings to HTTP JSON bodies.
+
+## 06. Lists, Tuples, and Sets in Python
+
+When building a system to track stock, we rarely deal with just one product at a time. We need collections to group our items together. Python offers three primary built-in collection types, each designed for a specific structural purpose.
+
+### The Three Core Collection Types
+
+- Lists (`[]`): Ordered, mutable sequence of elements. Elements can be modified, added, or duplicated.
+  - Best for: A dynamic queue of products in a store's active stock list where items can be added, sorted, or removed.
+
+- Tuples (`()`): Ordered, immutable sequence of elements. Once created, a tuple cannot be changed or resized.
+  - Best for: Fixed data structures, like latitude/longitude coordinates of a warehouse, or database connection settings `(host, port)`.
+
+- Sets (`{}`): Unordered, mutable collection of unique elements with no duplicates.
+  - Best for: Rapidly checking membership or grouping unique tags (like `{"electronics", "sale"}`) where duplicates don't make sense.
+
+### Practical Example: Managing Collections of Stock
+
+Let's write a script that illustrates the practical behavior of all three collections under the hood.
+
+[Python Collections example](../src/sec02_python_refresher/03_getting_user_input.py)
