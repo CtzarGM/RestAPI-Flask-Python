@@ -283,3 +283,27 @@ Let's write a script that processes a list of raw stock dictionaries. We will us
 ### Key Takeaway for our Inventory Engine
 
 The `for ... in ...` loop is your workhorse for backend data transformations. When querying a database using SQLAlchemy, it will return collections of model instances. We will use for loops just like this one to serialize those models into JSON-compatible lists for our API responses.
+
+## 12. Loops in Python: The `while` Loop
+
+While a `for` loop is built to run over a pre-defined, finite collection, a `while` loop runs indefinitely until a specific condition becomes false.
+
+In backend engineering, we use `while` loops for tasks that don't have a pre-determined end point, such as:
+
+1. Background Workers: Continually polling a message queue or database for new inventory updates.
+
+1. Retry Logic: Trying to reconnect to a PostgreSQL database or MinIO object storage if the initial connection fails, up to a maximum number of attempts.
+
+1. Interactive CLIs: Keeping an administrative terminal session open until the operator types "exit".
+
+### Key Flow Controls: `break` and `continue`
+
+- `break`: Instantly terminates the loop and jumps to the code below it.
+
+- `continue`: Skips the rest of the current iteration and jumps straight back to the condition check at the top of the loop.
+
+### Practical Example: Simulated Database Connection Retrier
+
+Let's write a utility that simulates attempting to connect to our PostgreSQL instance. It will retry the connection until it succeeds, but will gracefully bail out (`break`) if it exceeds a maximum retry limit to avoid infinite loops and hanging threads.
+
+[While Loop example](../src/sec02_python_refresher/11_loops_for.py)
