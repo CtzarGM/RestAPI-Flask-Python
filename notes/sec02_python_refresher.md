@@ -326,8 +326,31 @@ When processing datasets (like an array of product dicts from a database query),
 
 Let's write a script that processes an active catalog. We will iterate through each product, check its stock level against a safety minimum, calculate reorder quantities, and handle high-priority safety flags—all in a single execution flow.
 
-[Complex Flow Control example](../src/sec02_python_refresher/11_loops_for.py)
+[Complex Flow Control example](../src/sec02_python_refresher/13_flow_control_loops_ifs.py)
 
 ### Key Takeaway for our Inventory Engine
 
 Nesting logic gives our code its decision-making capability. Using control statements like `continue` allows us to "short-circuit" unnecessary logic early, keeping execution pipelines fast and preventing deep, hard-to-read nesting (known as the "arrow anti-pattern" in software design).
+
+## 14. List Comprehensions in Python
+
+A list comprehension offers a shorter syntax when you want to create a new list based on the values of an existing list.
+
+### The Syntax
+
+$$\text{[expression for item in iterable if condition]}$$
+It replaces a standard multi-line `for` loop, variable declaration, and `.append()` call with a highly readable one-liner.
+
+### Practical Example: Filtering and Transforming Inventory Payloads
+
+Let's write a script that processes an active catalog. We will use list comprehensions to perform three common backend operations:
+
+1. Transformation: Extracting a clean list of uppercase product SKUs.
+1. Filtering: Filtering out only the products that are running low on stock.
+1. Mapping with Conditionals: Generating a list of price-tag strings, marking sale prices on the fly.
+
+[List Comprehension example](../src/sec02_python_refresher/14_list_comprehensions.py)
+
+### Key Takeaway for our Inventory Engine
+
+Under the hood, list comprehensions in Python are actually faster than standard `for` loops because their looping mechanics are performed at C-level speed inside the interpreter instead of relying on slow Python-level `.append()` attribute lookups. Use them whenever you need to map or filter records from database schemas!
