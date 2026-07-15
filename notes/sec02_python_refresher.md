@@ -306,8 +306,28 @@ In backend engineering, we use `while` loops for tasks that don't have a pre-det
 
 Let's write a utility that simulates attempting to connect to our PostgreSQL instance. It will retry the connection until it succeeds, but will gracefully bail out (`break`) if it exceeds a maximum retry limit to avoid infinite loops and hanging threads.
 
-[While Loop example](../src/sec02_python_refresher/11_loops_for.py)
+[While Loop example](../src/sec02_python_refresher/12_loops_while.py)
 
 ### Key Takeaway for our Inventory Engine
 
 Infinite loops are the silent killer of server CPUs. When writing a while loop, always ensure there is a guaranteed exit path—either by incrementing a counter variable or implementing a fail-safe break condition if a threshold is exceeded.
+
+## 13. Flow Control — Loops and `if` Statements
+
+When processing datasets (like an array of product dicts from a database query), we use loop/conditional nesting to:
+
+1. Filter records on the fly (e.g., skip deactivated shops).
+
+1. Apply business rules conditionally based on object attributes (e.g., apply a discount if stock is high).
+
+1. Short-circuit execution when certain limits or errors are hit.
+
+### Practical Example: Automated Inventory Reordering and Alerts
+
+Let's write a script that processes an active catalog. We will iterate through each product, check its stock level against a safety minimum, calculate reorder quantities, and handle high-priority safety flags—all in a single execution flow.
+
+[Complex Flow Control example](../src/sec02_python_refresher/11_loops_for.py)
+
+### Key Takeaway for our Inventory Engine
+
+Nesting logic gives our code its decision-making capability. Using control statements like `continue` allows us to "short-circuit" unnecessary logic early, keeping execution pipelines fast and preventing deep, hard-to-read nesting (known as the "arrow anti-pattern" in software design).
