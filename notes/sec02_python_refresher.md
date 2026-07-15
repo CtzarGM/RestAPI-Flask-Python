@@ -307,3 +307,7 @@ In backend engineering, we use `while` loops for tasks that don't have a pre-det
 Let's write a utility that simulates attempting to connect to our PostgreSQL instance. It will retry the connection until it succeeds, but will gracefully bail out (`break`) if it exceeds a maximum retry limit to avoid infinite loops and hanging threads.
 
 [While Loop example](../src/sec02_python_refresher/11_loops_for.py)
+
+### Key Takeaway for our Inventory Engine
+
+Infinite loops are the silent killer of server CPUs. When writing a while loop, always ensure there is a guaranteed exit path—either by incrementing a counter variable or implementing a fail-safe break condition if a threshold is exceeded.
